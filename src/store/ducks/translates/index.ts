@@ -18,14 +18,17 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
         msgerror: "",
         history: [
           ...state.history,
-          { id: 1, extented_number: action.payload, literal_number: 1 },
+          {
+            id: Math.random(),
+            literal_number: action.payload[0],
+            extented_number: action.payload[1],
+          },
         ],
       };
     case TranslatesActions.LOAD_FAILURE:
       return {
         ...state,
         msgerror: action.payload,
-        history: [...action.history],
       };
 
     default:
