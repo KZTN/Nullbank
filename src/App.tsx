@@ -1,7 +1,7 @@
 import React from "react";
 import Router from "./routes";
 import { Provider } from "react-redux";
-import store from "./store/rootReducer";
+import store from "./store";
 import "./App.scss";
 
 const App: React.FC = () => {

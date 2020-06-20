@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from "react";
 import { useDispatch } from "react-redux";
-import * as TranslateActions from "../../store/actions/translate";
+import * as TranslateActions from "../../store/ducks/translates/actions";
 
 // import { Container } from './styles';
 
@@ -10,7 +10,7 @@ const Form: React.FC = () => {
 
   function handleSubmit(e: FormEvent): void {
     e.preventDefault();
-    dispatch(TranslateActions.addNewEntry(textfield));
+    dispatch(TranslateActions.LoadRequest(textfield));
     alert(textfield);
     setTextField("");
   }

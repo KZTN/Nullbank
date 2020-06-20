@@ -6,13 +6,12 @@ export enum TranslatesTypes {
 
 export interface Entry {
   id: number;
-  literal_numer: number;
+  literal_number: number;
   extented_number: string;
 }
 
 export interface TranslatesState {
   readonly history: Entry[];
-  readonly loading: boolean;
   readonly error: boolean;
   readonly msgerror: string;
 }

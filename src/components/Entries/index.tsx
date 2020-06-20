@@ -1,15 +1,24 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import RootState from "../../store/rootReducer";
+import { ApplicationState } from "../../store";
+import { useSelector } from "react-redux";
 
 const Entries: React.FC = () => {
-  const entries = useSelector((state: RootState) => state.translate.entries);
+  const entries = useSelector((state: ApplicationState) => state.translate);
+  console.log(entries.history);
   return (
     <div className="entries">
       <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
+        {entries.history.map((entry) => (
+          <li key={entry.id}>
+            <span>
+              Número literal: <strong>{entry.literal_number}</strong>
+            </span>
+            <br />
+            <span>
+              Número por extenso: <strong>{entry.extented_number}</strong>
+            </span>
+          </li>
+        ))}
       </ul>
     </div>
   );

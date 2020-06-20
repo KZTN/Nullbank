@@ -1,7 +1,9 @@
-import { createStore } from "redux";
-
+import { createStore, Store } from "redux";
+import { TranslatesState } from "./ducks/translates/types";
 import rootReducer from "./ducks/rootReducer";
-
-const store = createStore(rootReducer);
+export interface ApplicationState {
+  translate: TranslatesState;
+}
+const store: Store<ApplicationState> = createStore(rootReducer);
 
 export default store;

@@ -1,9 +1,8 @@
 import { Reducer } from "redux";
 import { TranslatesState, TranslatesTypes } from "./types";
 const INITIAL_STATE: TranslatesState = {
-  history: [],
+  history: [{ id: 1, extented_number: "um", literal_number: 1 }],
   error: false,
-  loading: false,
   msgerror: "",
 };
 
@@ -13,7 +12,6 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: false,
-        error: false,
         msgerror: "",
         history: [...state.history, action.payload.entry],
       };
@@ -21,7 +19,6 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         loading: false,
-        error: true,
         msgerror: action.payload.msgerror,
         history: [...action.history],
       };
