@@ -11,11 +11,10 @@ interface Action {
 }
 
 function* request({ payload }: Action): object {
+  console.log("o numero literal e " + payload);
   try {
-    const response = yield call(
-      api.get,
-      `?translate=${payload.literal_number}`
-    );
+    const response = yield call(api.get, `?translate=${payload}`);
+    console.log("o numero por extenso e " + response.data);
     yield put(LoadSucess(response.data));
   } catch (error) {
     yield put(LoadFailure(error));
