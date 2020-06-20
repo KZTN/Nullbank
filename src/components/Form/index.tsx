@@ -1,12 +1,16 @@
 import React, { useState, FormEvent } from "react";
+import { useDispatch } from "react-redux";
+import * as TranslateActions from "../../store/actions/translate";
 
 // import { Container } from './styles';
 
 const Form: React.FC = () => {
-  const [textfield, setTextField] = useState<string>();
+  const [textfield, setTextField] = useState<string>("");
+  const dispatch = useDispatch();
 
   function handleSubmit(e: FormEvent): void {
     e.preventDefault();
+    dispatch(TranslateActions.addNewEntry(textfield));
     alert(textfield);
     setTextField("");
   }
@@ -21,7 +25,7 @@ const Form: React.FC = () => {
         onChange={(e) => setTextField(e.target.value)}
         required
       />
-      <button type="submit">Enviar</button>
+      <button type="submit">Send</button>
     </form>
   );
 };

@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import RootState from "../../store/rootReducer";
 
-const History: React.FC = () => {
+const Entries: React.FC = () => {
+  const entries = useSelector((state: RootState) => state.translate.entries);
   return (
     <div className="entries">
       <ul>
@@ -12,4 +15,4 @@ const History: React.FC = () => {
   );
 };
 
-export default History;
+export default Entries;
