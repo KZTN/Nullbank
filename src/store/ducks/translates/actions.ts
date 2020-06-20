@@ -1,9 +1,9 @@
 import { action } from "typesafe-actions";
-import { TranslatesTypes } from "./types";
+import { TranslatesActions } from "./types";
 
-export const LoadRequest = (entry: string) =>
-  action(TranslatesTypes.LOAD_REQUEST, entry);
+export const LoadRequest = (literal_number: string) =>
+  action(TranslatesActions.LOAD_REQUEST, literal_number);
 export const LoadSucess = (data: string) =>
-  action(TranslatesTypes.LOAD_SUCCESS, data);
+  action(TranslatesActions.LOAD_SUCCESS, data);
 export const LoadFailure = (error: string) =>
-  action(TranslatesTypes.LOAD_FAILURE, error);
+  action(TranslatesActions.LOAD_FAILURE, error);

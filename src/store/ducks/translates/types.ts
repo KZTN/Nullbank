@@ -1,7 +1,7 @@
-export enum TranslatesTypes {
-  LOAD_REQUEST = "@repositories/LOAD_REQUEST",
-  LOAD_SUCCESS = "@repositories/LOAD_SUCCESS",
-  LOAD_FAILURE = "@repositories/LOAD_FAILURE",
+export enum TranslatesActions {
+  LOAD_REQUEST = "@translate/LOAD_REQUEST",
+  LOAD_SUCCESS = "@translate/LOAD_SUCCESS",
+  LOAD_FAILURE = "@translate/LOAD_FAILURE",
 }
 
 export interface Entry {

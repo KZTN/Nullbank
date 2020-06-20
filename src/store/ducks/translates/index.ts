@@ -1,25 +1,27 @@
 import { Reducer } from "redux";
-import { TranslatesState, TranslatesTypes } from "./types";
+import { TranslatesState, TranslatesActions } from "./types";
 const INITIAL_STATE: TranslatesState = {
-  history: [{ id: 1, extented_number: "um", literal_number: 1 }],
+  history: [],
   error: false,
   msgerror: "",
 };
 
 const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case TranslatesTypes.LOAD_SUCCESS:
+    case TranslatesActions.LOAD_REQUEST:
       return {
         ...state,
-        loading: false,
-        msgerror: "",
-        history: [...state.history, action.payload.entry],
       };
-    case TranslatesTypes.LOAD_FAILURE:
+    case TranslatesActions.LOAD_SUCCESS:
       return {
         ...state,
-        loading: false,
-        msgerror: action.payload.msgerror,
+        msgerror: "",
+        history: [...state.history, action.payload],
+      };
+    case TranslatesActions.LOAD_FAILURE:
+      return {
+        ...state,
+        msgerror: action.payload,
         history: [...action.history],
       };
 
