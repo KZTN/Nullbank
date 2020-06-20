@@ -5,16 +5,13 @@ import { LoadFailure, LoadSucess } from "./actions";
 
 interface Action {
   type: string;
-  payload: {
-    literal_number: number;
-  };
+  payload: number;
 }
 
 function* request({ payload }: Action): object {
   console.log("o numero literal e " + payload);
   try {
     const response = yield call(api.get, `?translate=${payload}`);
-    console.log("o numero por extenso e " + response.data);
     yield put(LoadSucess(response.data));
   } catch (error) {
     yield put(LoadFailure(error));

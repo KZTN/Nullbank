@@ -10,7 +10,7 @@ const Form: React.FC = () => {
 
   function handleSubmit(e: FormEvent): void {
     e.preventDefault();
-    dispatch(TranslateActions.LoadRequest(textfield));
+    dispatch(TranslateActions.LoadRequest(parseInt(textfield)));
     setTextField("");
   }
 

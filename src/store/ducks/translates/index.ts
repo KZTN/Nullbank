@@ -16,7 +16,10 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         msgerror: "",
-        history: [...state.history, action.payload],
+        history: [
+          ...state.history,
+          { id: 1, extented_number: action.payload, literal_number: 1 },
+        ],
       };
     case TranslatesActions.LOAD_FAILURE:
       return {
