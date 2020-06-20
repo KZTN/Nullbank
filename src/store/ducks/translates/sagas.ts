@@ -14,7 +14,8 @@ function* request({ payload }: Action): object {
     const response = yield call(api.get, `?translate=${payload}`);
     yield put(LoadSucess([payload, response.data]));
   } catch (error) {
-    yield put(LoadFailure(error));
+    console.log(error.response.data);
+    yield put(LoadFailure(error.response.data));
   }
 }
 

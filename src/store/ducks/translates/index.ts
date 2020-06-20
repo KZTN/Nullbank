@@ -15,6 +15,7 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
     case TranslatesActions.LOAD_SUCCESS:
       return {
         ...state,
+        error: false,
         msgerror: "",
         history: [
           ...state.history,
@@ -29,6 +30,7 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         msgerror: action.payload,
+        error: true,
       };
 
     default:

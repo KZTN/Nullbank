@@ -5,6 +5,11 @@ import { useSelector } from "react-redux";
 const Entries: React.FC = () => {
   const entries = useSelector((state: ApplicationState) => state.translate);
   console.log(entries.history);
+  if (entries.error) {
+    alert(entries.msgerror);
+  } else {
+    alert("success");
+  }
   return (
     <div className="entries">
       <ul>
