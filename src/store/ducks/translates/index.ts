@@ -32,7 +32,11 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
         msgerror: action.payload,
         error: true,
       };
-
+    case TranslatesActions.LOAD_RESET:
+      state = INITIAL_STATE;
+      return {
+        ...state,
+      };
     default:
       return state;
   }

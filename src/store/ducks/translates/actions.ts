@@ -7,3 +7,5 @@ export const LoadSucess = (data: string[]) =>
   action(TranslatesActions.LOAD_SUCCESS, data);
 export const LoadFailure = (error: string) =>
   action(TranslatesActions.LOAD_FAILURE, error);
+
+export const LoadReset = () => action(TranslatesActions.LOAD_RESET);

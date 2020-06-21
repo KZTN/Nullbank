@@ -1,4 +1,5 @@
 export enum TranslatesActions {
+  LOAD_RESET = "@translate/LOAD_RESET",
   LOAD_REQUEST = "@translate/LOAD_REQUEST",
   LOAD_SUCCESS = "@translate/LOAD_SUCCESS",
   LOAD_FAILURE = "@translate/LOAD_FAILURE",

@@ -13,19 +13,26 @@ const Form: React.FC = () => {
     dispatch(TranslateActions.LoadRequest(parseFloat(textfield)));
     setTextField("");
   }
-
+  function handleReset(): void {
+    dispatch(TranslateActions.LoadReset());
+  }
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="inputfield"
-        id="inputfield"
-        value={textfield}
-        onChange={(e) => setTextField(e.target.value)}
-        required
-      />
-      <button type="submit">Send</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="inputfield"
+          id="inputfield"
+          value={textfield}
+          onChange={(e) => setTextField(e.target.value)}
+          required
+        />
+        <button type="submit">Send</button>
+      </form>
+      <button type="button" onClick={handleReset}>
+        reset
+      </button>
+    </>
   );
 };
 
