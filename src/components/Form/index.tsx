@@ -14,7 +14,6 @@ const Form: React.FC = () => {
     dispatch(TranslateActions.LoadRequest(parseFloat(textfield)));
     setTextField("");
   }
-
   return (
     <>
       <form onSubmit={handleSubmit}>

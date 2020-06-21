@@ -18,7 +18,14 @@ const Entries: React.FC = () => {
       </div>
       <ul id="list">
         {entries.history.map((entry) => (
-          <li key={entry.id}>
+          <li
+            key={entry.id}
+            className={
+              entry.literal_number === entries.history.length
+                ? "exclusive-li"
+                : ""
+            }
+          >
             <div className="id">
               <span>#{entry.id}</span>
             </div>

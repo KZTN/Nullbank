@@ -17,6 +17,7 @@ const Counter: React.FC = () => {
         .get(`/?translate=${entries.history.length}`)
         .then((response: AxiosResponse) => {
           setTranslateCounter(response.data);
+          localStorage.setItem("counter", response.data);
         })
         .catch((error: AxiosError) => {
           console.log(error);

@@ -39,6 +39,9 @@
     margin-right: 10px;
   }
 }
+.entries ul li.exclusive-li {
+  background: var(--color-green);
+}
 .entries ul li .id {
   max-width: 60px;
   width: 100%;
