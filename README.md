@@ -20,3 +20,60 @@
 ## ℹ️  Informações
 
 Este é um desafio que faz parte do recrutamento da Salesfy. O projeto já está finalizado e funcional.
+
+
+## 💻 Projeto
+
+O projeto transforma números de forma numérica para sua respectiva representação textual em inglês através de uma API REST, onde se utiliza requisições e respostas HTTP.
+
+## 🔌 Base url 
+
+Todas chamadas devem usar a url abaixo:
+```
+http://localhost:3333
+```
+> Para mais informações do servidor, acesse [o repositório backend](https://github.com/KZTN/SalesfyChallengeBackend)
+
+## Começando...
+Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
+
+### Pré-requisitos
+O que você precisa para instalar o software:
+
+```
+node v12.x
+yarn 1.22.4
+git
+```
+
+### Instalando o projeto 🚀
+Clonando o projeto:
+
+```
+git clone https://github.com/KZTN/salesfy-challenge-frontend.git
+```
+
+Navegando até a pasta do projeto:
+
+```
+cd salesfy-challenge-frontend
+```
+
+
+Baixando as dependências do projeto:
+
+```bash
+yarn install
+```
+
+Rodando o projeto:
+
+```bash
+yarn start
+```
+
+Visite http://localhost:3000 para ver o resultado. 🎉
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
