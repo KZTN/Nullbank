@@ -5,11 +5,7 @@ import { useSelector } from "react-redux";
 const Entries: React.FC = () => {
   const entries = useSelector((state: ApplicationState) => state.translate);
   console.log(entries.history);
-  if (entries.error) {
-    alert(entries.msgerror);
-  } else {
-    alert("success");
-  }
+
   return (
     <div className="entries">
       <ul>
@@ -21,6 +17,10 @@ const Entries: React.FC = () => {
             <br />
             <span>
               Número por extenso: <strong>{entry.extented_number}</strong>
+            </span>
+            <br />
+            <span>
+              ID da entry: <strong>{entry.id}</strong>
             </span>
           </li>
         ))}
