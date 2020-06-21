@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { ApplicationState } from "../../store";
 import api from "../../services/api";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { AxiosResponse, AxiosError } from "axios";
-// import { Container } from './styles';
+import * as TranslateActions from "../../store/ducks/translates/actions";
 
+import "./styles.scss";
 const Counter: React.FC = () => {
+  const dispatch = useDispatch();
   const entries = useSelector((state: ApplicationState) => state.translate);
   const [translateCounter, setTranslateCounter] = useState();
   useEffect(() => {
@@ -22,7 +25,20 @@ const Counter: React.FC = () => {
     getData();
   }, [entries.history.length]);
 
-  return <strong>Number of entries: {translateCounter}</strong>;
+  function handleReset(): void {
+    dispatch(TranslateActions.LoadReset());
+  }
+
+  return (
+    <div className="counter">
+      <span>
+        Number of entries:<strong>{translateCounter}</strong>
+      </span>
+      <button type="button" onClick={handleReset}>
+        reset
+      </button>
+    </div>
+  );
 };
 
 export default Counter;
