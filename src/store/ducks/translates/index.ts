@@ -20,7 +20,7 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
         history: [
           ...state.history,
           {
-            id: Math.random(),
+            id: state.history.length + 1,
             literal_number: action.payload[0],
             extented_number: action.payload[1],
           },
