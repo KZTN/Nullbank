@@ -8,7 +8,10 @@ const Entries: React.FC = () => {
 
   useEffect(() => {
     var elem = document.querySelector("#list") as HTMLVideoElement;
-    elem.scrollTo(10000, 10000);
+    elem.scrollTo({
+      top: 400000,
+      behavior: "smooth",
+    });
   }, [entries]);
 
   return (
