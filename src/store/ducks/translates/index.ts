@@ -3,7 +3,7 @@ import { TranslatesState, TranslatesActions } from "./types";
 const INITIAL_STATE: TranslatesState = {
   history: [],
   error: false,
-  msgerror: "",
+  msg: "",
 };
 
 const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
@@ -16,7 +16,7 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         error: false,
-        msgerror: "",
+        msg: "",
         history: [
           ...state.history,
           {
@@ -29,13 +29,14 @@ const reducer: Reducer<TranslatesState> = (state = INITIAL_STATE, action) => {
     case TranslatesActions.LOAD_FAILURE:
       return {
         ...state,
-        msgerror: action.payload,
+        msg: action.payload,
         error: true,
       };
     case TranslatesActions.LOAD_RESET:
       state = INITIAL_STATE;
       return {
         ...state,
+        msg: "Entries history has been successfully reset",
       };
     default:
       return state;

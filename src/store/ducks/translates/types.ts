@@ -14,5 +14,5 @@ export interface Entry {
 export interface TranslatesState {
   readonly history: Entry[];
   readonly error: boolean;
-  readonly msgerror: string;
+  readonly msg: string;
 }
