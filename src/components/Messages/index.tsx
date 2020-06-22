@@ -5,6 +5,7 @@ import { ApplicationState } from "../../store";
 
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
+import Grow from "@material-ui/core/Grow";
 
 const Messages: React.FC = () => {
   const entries = useSelector((state: ApplicationState) => state.translate);
@@ -31,6 +32,10 @@ const Messages: React.FC = () => {
     setAlertisopen(false);
   };
 
+  function GrowTransition(props: any) {
+    return <Grow {...props} />;
+  }
+
   function Alert(props: any) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
@@ -41,6 +46,7 @@ const Messages: React.FC = () => {
         open={alertisopen}
         autoHideDuration={4000}
         onClose={handleClose}
+        TransitionComponent={GrowTransition}
       >
         <Alert onClose={handleClose} severity={severity}>
           {alertmsg}
