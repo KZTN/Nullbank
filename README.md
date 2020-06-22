@@ -16,6 +16,9 @@
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
+<p align="center">
+  <img alt="COVID-RN" src=".github/SALESFY_showcase.png" width="100%">
+</p>
 
 ## ℹ️  Informações
 
