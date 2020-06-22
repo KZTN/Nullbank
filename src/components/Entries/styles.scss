@@ -23,6 +23,13 @@
   overflow-y: scroll;
 }
 
+.entries ul::-webkit-scrollbar {
+  display: none;
+}
+.entries ul::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 .entries ul li {
   display: flex;
   flex-direction: row;
