@@ -30,6 +30,12 @@ html {
 button::-moz-focus-inner {
   border: 0;
 }
+::selection {
+  background: var(--color-whiteblue); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--color-whiteblue); /* Gecko Browsers */
+}
 
 html,
 body,
