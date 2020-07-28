@@ -29,6 +29,15 @@ Este é um desafio que faz parte do recrutamento da Salesfy. O projeto já está
 
 O projeto transforma números de forma numérica para sua respectiva representação textual em inglês através de uma API REST, onde se utiliza requisições e respostas HTTP.
 
+## 🧾  Regras de negócio
+
+- Um número de entrada sempre deverá estar em seu formato numérico
+- A tradução literal dos números é dada em inglês
+- A margem de números traduzidos estão num alcance de 0 a 999999999999(um trilhão menos um)
+- Números negativos, decimais ou fora do limite de números serão descartados
+- Caso o número de entradas seja igual ao número pré-registrado no histórico, este receberá uma estilização especial. Vindo a perdê-la ao incremento de novas entradas.
+
+
 ## 🔌 Base url 
 
 Todas chamadas devem usar a url abaixo:
