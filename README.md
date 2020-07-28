@@ -34,7 +34,7 @@ O projeto transforma números de forma numérica para sua respectiva representa�
 - Um número de entrada sempre deverá estar em seu formato numérico
 - A tradução literal dos números é dada em inglês
 - A margem de números traduzidos estão num alcance de 0 a 999999999999(um trilhão menos um)
-- Números negativos, decimais ou fora do limite de números serão descartados
+- Texto, números negativos, números decimais ou fora do alcance de cobertura serão descartados
 - Caso o número de entradas seja igual ao número pré-registrado no histórico, este receberá uma estilização especial. Vindo a perdê-la ao incremento de novas entradas.
 
 
