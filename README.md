@@ -1,4 +1,4 @@
-<h1 align="center">salesfy-challenge-frontend</h1>
+<h1 align="center">NullBank</h1>
 <h4 align="center">
   Aplicação de Tradução de números em sua representação textual
 </h4>
